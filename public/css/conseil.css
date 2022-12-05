@@ -1,0 +1,49 @@
+.conseilPhoto {
+    width: 200px;
+    height: 240px;
+    border: 1px solid #008EA0;
+}
+
+.conseilContainer{
+    color: #085979;
+    margin: auto;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+#conseillersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 5vh;
+}
+
+#adjointsContainer{
+    display: flex;
+    margin-bottom: 10vh;
+}
+
+#fullConseilContainer{
+    width: 80vw;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.366);
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+#titreConseil{
+    color: #008EA0;
+    border-bottom: 1px solid #D4343F;
+    margin: auto;
+    width: 80%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 5vh;
+}
+
+.conseilRole{
+    font-weight: bold;
+}

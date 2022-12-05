@@ -1,0 +1,55 @@
+<%- include('./partials/header') %>
+
+<main>
+    <div id="plage">
+    </div>
+    <div id="blancTransparent">
+    </div>
+    <div id="ligneBoutons">
+        <a href="#" >
+            <div class="boutonAcceuil">
+                <i class="fa-regular fa-building fa-2xl" data-fa-transform="grow-6"></i>
+            </div>
+            <p class="boutonDescription">Mairie</p>
+        </a>
+        <a href="#" >
+            <div class="boutonAcceuil">
+                <i class="fa-regular fa-user fa-2xl" data-fa-transform="grow-6"></i>
+            </div>
+            <p class="boutonDescription">Biblio-poste</p>
+        </a>
+        <a href="#" >
+            <div class="boutonAcceuil">
+                <i class="fa-regular fa-pen-to-square fa-2xl" data-fa-transform="grow-6"></i>
+            </div>
+            <p class="boutonDescription">Commerces</p>
+        </a>
+        <a href="#" >
+            <div class="boutonAcceuil">
+                <i class="fa-regular fa-handshake fa-2xl" data-fa-transform="grow-6"></i>
+            </div>
+            <p class="boutonDescription">Associations</p>
+        </a>
+    </div>
+<!-- En dessous de la ligne de boutons // Les activités Agenda -->
+    <div>
+        <h2>L'Agenda des prochaines activités :</h2>
+        <div id="AgendaContainer">
+            <% let newArray = NewsList.slice(0,3) %>
+			<%  for (news of newArray) { %>
+                <article class="AgendaArticle">
+                    <h4><%= news.title %> </h4>
+                    <img src="../img/<%=news.photo%>.jpg" class="AgendaImg">
+                    <p class="agendaDate"><%=news.date%></p>
+                    <p><%= news.description%></p>
+                    <a href="/news/unic/<%=news.id%>" class="agendaLink tn"><div class="button type1">En savoir plus</div></a>
+                </article>
+			<% }%>
+        </div>
+        <a href="/news"><div class="btn from-left">Plus de news ...</div></a>
+    </div>
+</main>
+
+
+<%- include('./partials/footer') %>
+<!-- <script src="./weather.js"></script> -->

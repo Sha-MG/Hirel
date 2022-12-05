@@ -1,0 +1,21 @@
+<%- include('partials/header')%>
+<main>
+    <h2><%= foundArticle.title %></h2>
+    <p class="dateNews"><%= foundArticle.date %></p>
+    <div id="imagesNews">
+        <figure>
+            <img src="/img/<%= foundArticle.photo %>.jpg">
+            <figcaption class="descriptionPhoto">C'est un test</figcaption>
+        </figure>
+    </div>
+    <p id="descriptionNews"><%= foundArticle.description_details %></p>
+    <div id="contact">
+        <h3>Contact :</h3>
+        <p><i class="fa-solid fa-phone fa-xl"></i><%= foundArticle.numero%> </p>
+        <p><i class="fa-regular fa-envelope fa-xl"></i><%= foundArticle.contact%></p>
+    </div>
+    <a href="/news"><div class="btn from-left">Retour vers les News</div></a>
+</main>
+
+
+<%- include('partials/footer')%>

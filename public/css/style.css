@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*, *:before, *:after {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+body{
+    background:#ECEBEA;
+    line-height:1.5;
+    font-family: 'Abel', sans-serif;
+    font-size:16px;
+    color:#ECEBEA;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:#ECEBEA
+}
+
+#header{
+    z-index: 5;
+    text-transform:uppercase;
+    font-weight: bold;
+    background:#085979;
+    width:100%;
+    position:relative
+}
+#header:after{
+    content:"";
+    clear:both;
+    display:block
+}
+
+.search{
+    float:right;
+    padding:30px
+}
+
+input{
+    border:none;
+    padding:10px;
+    border-radius:20px
+}
+
+.logo{
+  float:left;
+  font-family: 'Great Vibes', cursive;
+  margin: 20px 20px 0 20px;
+}
+.logo a{
+  height: 100%;
+  width: 100%;
+  text-transform: none;
+  font-weight: lighter;
+  font-size:3rem;
+  display:block;
+  margin:0;
+}
+#blason{
+  float: left;
+  height: 7vh;
+  margin-right: 2vh;
+}
+nav{
+  float:right;
+}
+nav>ul{
+  float:left;
+  position:relative
+}
+nav li{
+  list-style:none;
+  float:left
+}
+nav li a{
+  float:left;
+  padding:35px
+}
+nav li a:hover{
+  background:#2C3E50
+}
+nav li ul{
+  display:none
+}
+nav li:hover ul{
+  display:flex;
+  gap: 20px;
+  width: 100%;
+}
+nav li li{
+  float:none;
+}
+
+.mega-col > a {
+ margin: 10px;
+}
+nav .mega-dropdown{
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#008EA0;
+  overflow:hidden;
+  border-bottom:3px solid #D4343F;
+  justify-content: center;
+  align-items: center;
+}
+nav li li a{
+  float:none;
+  display:block;
+  font-size:0.8rem;
+  color: #ECEBEA;
+  text-align: center;
+  background-color :#2C3E50;
+  width: 10vw;
+  height: 10vh;
+  transition: all 0.2s ease-in;
+  border-bottom:3px solid #ECEBEA;
+}
+
+nav li li a:hover{
+  background:#ECEBEA;
+  border: 1px solid #D4343F;
+  color: #2C3E50;
+  border-bottom: 3px solid #D4343F;
+}
+.mega-col{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 1170px) {
+  nav >ul>li >a{padding:35px 15px}
+}
+@media only screen and (min-width: 960px) {
+  nav{display:block!important}
+}
+@media only screen and (max-width: 959px) {
+
+  nav{
+    display:none;
+    width:100%;
+    clear:both;
+    float:none;
+    max-height:400px;
+    overflow-y:scroll
+}
+  #menu-icon{
+    display:inline;
+    top:45px;
+    cursor:pointer
+}
+  #menu-icon.active .first{
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    margin-top:10px
+}
+
+  #menu-icon.active .second{
+    transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    position:relative;
+    z-index: 2;
+    top:-9px;
+}
+
+  #menu-icon.active .third{
+    display:none
+}
+  .search{
+    float:none
+}
+  .search input
+  {
+    width:100%
+}
+  nav{
+    padding:10px
+}
+  nav ul{
+    float:none
+}
+  nav li{
+    float:none;
+
+}
+
+  nav ul li a{
+    float:none;
+    display:block;
+}
+
+  #header nav ul ul{
+    display:block;
+    position:static;
+    background:none;
+    border:none;
+    padding:0
+}
+  #header nav a{
+    color:#ECEBEA;
+    padding:8px
+}
+  #header nav a:hover{
+    background:#ECEBEA;
+    color:#2C3E50;
+    border-radius:3px
+}
+  #header nav ul li li a:before{
+    content:"- "
+}
+  .mega-col{
+    width:100%
+}
+}
+
+footer {
+  text-transform:uppercase;
+  font-weight: bold;
+  background-color:#085979;
+  width: 100%;
+}
+
+footer a{
+  font-family: 'Great Vibes', cursive;
+  text-transform: none;
+  font-weight: lighter;
+  font-size:3rem;
+  margin: auto;
+  margin-top: 2vh ;
+}
+
+
+footer img{
+  float: left;
+  height: 4vh;
+  margin: 2vh ;
+} 
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  margin-right: 10vh;
+  margin-top: 3vh;
+}
+
+footer li {
+  margin-left: 30px;
+  list-style-type: none;
+}
+
+footer i {
+  margin-right: 10px ;
+}

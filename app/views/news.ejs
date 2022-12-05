@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+<div id="plage">
+</div>
+<div id="filtreCategory">
+    <p id="filtreTitle">Vous cherchez un article en particulier ?</p>
+    <ul> Par catégories :
+        <% for(category of NewsListCategory){ %>
+            <a href="/news/<%=category%>"><li><%= category%> </li></a>
+        <%}%>
+    </ul>
+
+    <ul> Par saisons :
+        <% for(saison of NewsListSaison){ %>
+            <a href="/news/saison/<%=saison%>"><li><%= saison %> </li></a>
+        <%}%>
+    </ul>
+    <p id="backAllNews"><a href="/news">Toutes les news</a></p>
+</div>
+
+<div id="blancTransparent">
+</div>
+<h2>L'Agenda des prochaines activités :</h2>
+<div id="allArticle">
+<%  for (news of NewsList) { %>
+    <article class="AgendaArticle">
+        <h4><%= news.title %> </h4>
+        <img src="/img/<%=news.photo%>.jpg" class="AgendaImg">
+        <p class="agendaDate"><%=news.date%></p>
+        <p><%= news.description%></p>
+        <a href="/news/unic/<%=news.id%>" class="agendaLink tn"><div class="button type1">En savoir plus</div></a>
+    </article>
+<% }%>
+</div>
+
+<%- include('partials/footer') %>

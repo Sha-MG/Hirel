@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+<article id="fullConseilContainer">
+<h2 id="titreConseil">Conseil municipal :</h2>
+    <% for(conseiller of conseil){%>
+        <% if(conseiller.role === "Maire"){ %>
+         <article class="conseilContainer">
+             <p class="conseilNom "><%= conseiller.nom %> <%= conseiller.prenom %></p>
+             <img src="/img/<%=conseiller.photo%>.png" alt="photo de <%= conseiller.nom %> <%= conseiller.prenom %>" class="conseilPhoto">
+             <p class="conseilRole"><%= conseiller.role %></p>
+         </article>
+         <%}%>
+     <%}%>
+     <div id="adjointsContainer">
+        <% for(conseiller of conseil){%>
+        <% if(conseiller.role.includes('adjoint')){ %>
+            <article class="conseilContainer">
+                <p class="conseilNom "><%= conseiller.nom %> <%= conseiller.prenom %></p>
+                <img src="/img/<%=conseiller.photo%>.png" alt="photo de <%= conseiller.nom %> <%= conseiller.prenom %>" class="conseilPhoto">
+                <p class="conseilRole"><%= conseiller.role %></p>
+            </article>
+            <%}%>
+        <%}%>
+    </div>
+    <div id="conseillersContainer">
+        <% for(conseiller of conseil){%>
+        <% if(conseiller.role === "Conseiller" || conseiller.role === "Conseillère"){ %>
+            <article class="conseilContainer">
+                <p class="conseilNom "><%= conseiller.nom %> <%= conseiller.prenom %></p>
+                <img src="/img/<%=conseiller.photo%>.png" alt="photo de <%= conseiller.nom %> <%= conseiller.prenom %>" class="conseilPhoto">
+                <p class="conseilRole"><%= conseiller.role %></p>
+            </article>
+            <%}%>
+        <%}%>
+    </div>
+</article>
+
+
+
+<%- include('partials/footer') %>
